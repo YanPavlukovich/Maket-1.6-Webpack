@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="ru">
 <head>
   <meta charset="UTF-8">
   <meta name="viewport" content="width=device-width, initial-scale=1.0">
@@ -7,11 +7,87 @@
   <title>new site</title>
 </head>
 <body>
-  <div class="site-container">
-    <header class="header">
-      <h1 class="welcome-title">Ура! Webpack работает!</h1>
-      <img src="./img/8489677c51328e6c8856f189698fa08b.jpg" alt="">
-    </header>
-  </div>
+  <div class="mob-menu">
+		<img class="icon mob-menu__icon--burger" 
+		src="./images/mob_menu-mobile/burger.svg" 
+		alt="Открыть меню управления">
+		<img class="icon mob-menu__icon--group" 
+		src="./images/mob_menu-mobile/Group.svg" 
+		alt="Логотип компании">
+		<div class="mob-menu__divider"></div>
+		<img class="icon mob-menu__icon--repair" 
+		src="./images/mob_menu-mobile/repair.svg" 
+		alt="Оставить заявку">
+		<img class="icon mob-menu__icon--status" 
+		src="./images/mob_menu-mobile/status.svg" 
+		alt="Статус ремонта">
+	</div>
+	<div class="tab-menu">
+		<img class="icon tab-menu__icon--burger" 
+		src="./images/mob_menu-tablet/burger.svg" 
+		alt="Открыть меню управления">
+		<div class="tab-menu__divider"></div>
+		<img class="icon tab-menu__icon--group" 
+		src="./images/mob_menu-tablet/Group.svg" 
+		alt="Логотип компании">
+		<img class="icon tab-menu__icon--call" 
+		src="./images/mob_menu-tablet/call.svg" 
+		alt="Заявка по телефону, уточнение информации">
+		<img class="icon tab-menu__icon--chat" 
+		src="./images/mob_menu-tablet/chat.svg" 
+		alt="Напишите нам в чат">
+		<img class="icon tab-menu__icon--profile" 
+		src="./images/mob_menu-tablet/profile.svg" 
+		alt="Ваш профиль">
+		<div class="tab-menu__divider"></div>
+		<img class="icon tab-menu__icon--repair" 
+		src="./images/mob_menu-tablet/repair.svg" 
+		alt="Оставить заявку">
+		<img class="icon tab-menu__icon--status" 
+		src="./images/mob_menu-tablet/status.svg" 
+		alt="Статус ремонта">
+	</div>
+		<header class="header">
+			<div class="header__title">
+				<div class="header__highlight"></div>
+				<h1 class="header__caption">Услуги и сервисы</h1>
+				<button class="button header__button-request">Оставить заявку</button>
+				<img class="icon header__icon--repair" 
+				src="./images/header__title-and-actions/repair.svg" 
+				alt="Оставить заявку">
+				<button class="button header__button-status">Статус ремонта</button>
+				<img class="icon header__icon--status" 
+				src="./images/header__title-and-actions/status.svg" 
+				alt="Статус ремонта">
+			</div>
+			<div class="header__menu">
+				<nav class="header__navigation">
+					<button class="item header__item--active">Ремонтируемые бренды</button>
+					<button class="item header__item">Ремонтируемые устройства</button>
+					<button class="item header__item">Цены на услуги</button>
+					<button class="item header__item">Адреса сервисных центров</button>
+					<button class="item header__item">Специальные цены</button>
+					<button class="item header__item">Отзывы</button>
+				</nav>
+			</div>
+		</header>
+		<main class="item-content">
+			<section class="item-content__text">
+				<p class="par">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
+				<p class="par lower"><span class="p-mobile">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера<span class="p-tablet">, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</span></span></p>
+				<nav class="open-out">
+					<img class="open-out__icon" src="./images/open-out/expand.svg" alt="Раскрыть">
+					<button class="open-out__button">Читать далее</button>
+				</nav>
+			</section>
+			<section class="item-content__image">
+				<img class="item-content__image--big"src="./images/item-content__image/image-aside.png" 
+			alt="Фотографи логотипа компании">
+			<img class="item-content__image--mid" src="./images/item-content__image/image-aside-tab.png" 
+			alt="Фотографи логотипа компании">
+			<img class="item-content__image--sml" src="./images/item-content__image/image-aside-mob.png" 
+			alt="Фотографи логотипа компании">
+			</section>
+		</main>
 </body>
 </html>
