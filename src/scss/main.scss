@@ -1,18 +1,13 @@
-@import "mixins";
+@import "normalize";
+// @import "mixins";
 @import "fonts";
-@import "vendor";
+// @import "vendor";
 @import "vars";
 @import "settings";
-
-
-.header {
-  text-align: center;
-  & img {
-    width: 30%;
-  }
-}
-
-.welcome-title {
-  margin-top: 50px;
-  font-size: 6em;
-}
+@import "services";
+@import "menu";
+@import "brands.scss";
+@import "technics";
+@import "prices";
+// @import "outline.css";
+@import "footer";

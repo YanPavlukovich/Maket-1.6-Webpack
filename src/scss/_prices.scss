@@ -1,0 +1,117 @@
+.prices {
+	padding-left: 32px;
+	margin-top: 50px;
+}
+
+.prices-title {
+	background: linear-gradient(-270deg, #F8F8F8 0%, #FFFFFF 98.61%);
+	color: #7E7E82;
+	text-transform: uppercase;
+	font-size: 16px;
+	line-height: 55px;
+	height: 56px;
+	box-shadow: 0px -10px 5px -10px $line-shadow;
+}
+
+.prices-table {
+	border-radius: 5px;
+	font-weight: normal;
+	border: none;
+	border-collapse: collapse;
+	width: 100%;
+	max-width: 100%;
+	margin-top: 31px;
+}
+
+.prices-tbody__column {
+	border-radius: 6px;
+	line-height: 18px;
+}
+
+.prices-tbody__column:nth-child(4n) {
+	text-align: end;
+}
+
+.prices-table .prices-thead__column, 
+.prices-table .prices-tbody__column {
+	padding: 10px 20px;
+	font-size: 14px;
+	border: none;    
+	border-bottom: 1px solid $border-bottom;
+	vertical-align: top;
+	background-color: $white;
+	vertical-align: middle;
+}
+
+.prices-table .prices-thead__column {
+	color: $menu-text-color;
+	background: $background;
+	font-weight: $font-regular;
+	border: none;    
+	text-align: start;    
+}
+
+.prices-table 
+.prices-tbody__column 
+.prices-tbody__column--header {
+	background: #337AB7;
+	color: #FFF;
+	display: none;
+	font-size: 11px;
+	font-weight: $font-bold;    
+	text-transform: uppercase;        
+	padding: 5px 10px;
+	position: absolute;
+	top: 0;
+	left: 0;    
+}
+
+.prices-info__taxe {
+	margin-top: 32px;
+	width: 100%;
+}
+.prices-info__offer {
+	margin-top: 16px;
+	display: flex;
+	align-items: center;
+	justify-content: start;
+	
+	height: 24px;
+	background-color: transparent;
+	border-color: transparent;
+	// white-space: nowrap;
+	padding: 0;
+	font-weight: $font-medium;
+	line-height: 24px;
+}
+.prices-info__offer--text {
+	margin-bottom: 2px;
+}
+
+@media(max-width: 767px) {
+	.prices-table .prices-thead {
+			display: none;
+	}
+	.prices-table .prices-tbody__row {
+			display: flex;
+			flex-direction: row;
+			flex-wrap: wrap;
+			margin-bottom: 30px;
+	}
+	.prices-table .prices-tbody__column {
+			margin: 0 -1px -1px 0;
+			padding-top: 35px;
+			position: relative;
+			width: 50%;
+	}
+	.prices-table 
+	.prices-tbody__column 
+	.prices-tbody__column--header {
+			display: block;
+	}
+}
+@media(max-width: 480px) {
+	.prices-table .prices-tbody__column {
+			width: 100%;
+	}
+}

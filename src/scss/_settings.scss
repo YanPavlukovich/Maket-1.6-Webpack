@@ -1,5 +1,6 @@
 html {
   box-sizing: border-box;
+	height: 100%;
 }
 
 *,
@@ -13,12 +14,23 @@ html {
 }
 
 body {
-  overflow-anchor: none;
+	max-width: 100%;
+  overflow-x: hidden;
   margin: 0;
-  font-family: 'Barlow', sans-serif;
+  font-family: $font-family;
+
   color: $main-text-color;
-  background-color: $background;
+  background-color: $background-dark;
   scroll-behavior: smooth;
+	line-height: 20px;
+	margin-top: 88px;
+	@media (min-width: 1366px) {
+		margin-top: 0px;
+	}
+}
+
+.brands, .technics, .prices {
+	width: 1096px;
 }
 
 a {
@@ -66,10 +78,6 @@ textarea:focus {
   outline:none;
 }
 
-footer {
-  background: $footer-background;
-}
-
 .is--hidden {
   display: none !important;
 }
@@ -90,19 +98,23 @@ footer {
   border: 2px var(--error-red) solid !important;
 }
 
-.container {
-  max-width: 1810px;
+.services {
+  width: 100%;
   margin: 0 auto;
-  padding-right: 20px;
-  padding-left: 20px;
+	background-color: $background;
 
-  @media (max-width: 1200px) {
-    padding-right: 50px;
-    padding-left: 50px;
-  }
+	@media (min-width: 1366px) {
+		display: flex;
+		flex-wrap: nowrap;
+		justify-content: center;
+	}
 
-  @media (max-width: 576px) {
-    padding-right: 15px;
-    padding-left: 15px;
-  }
+	&__site-content {
+		background-color: $background;
+	}
+
+	&__side-menu {
+		
+		background-color: $white;
+	}
 }
