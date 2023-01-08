@@ -1,55 +1,59 @@
-// Slider Swiper
-// const sliderTechnics = document.querySelector(".swiper-technics");
+//Slider Swiper Technics.
+const sliderTechnics = document.querySelector(".technics-swiper");
 
-// function mobileSliderTechnics() {
-//   if (window.innerWidth < 768 && sliderTechnics.dataset.mobile == "false") {
-//     mySwiper2 = new Swiper(sliderTechnics, {
-//       slidesPerView: "auto",
-//       spaceBetween: 16,
-//       loop: false,
-//       pagination: {
-//         el: ".swiper-pagination pag-2",
-//         clickable: true,
-//       },
-//     });
-//     sliderTechnics.dataset.mobile = "true";
-//   }
-//   if (window.innerWidth > 768) {
-//     sliderTechnics.dataset.mobile = "false";
-//     if (sliderTechnics.classList.contains("swiper-technics-initialized")) {
-//       mySwiper2.destroy();
-//     }
-//   }
-// }
+let mobileSliderTechnics = () => {
+  if (
+    document.documentElement.clientWidth < 768 &&
+    sliderTechnics.dataset.mobile == "false"
+  ) {
+    mySwiper2 = new Swiper(sliderTechnics, {
+      slidesPerView: "auto",
+      spaceBetween: 16,
+      loop: false,
+      pagination: {
+        el: ".swiper-pagination",
+        type: "bullets",
+        clickable: true,
+      },
+    });
+    sliderTechnics.dataset.mobile = "true";
+  }
+  if (document.documentElement.clientWidth > 768) {
+    sliderTechnics.dataset.mobile = "false";
+    if (sliderTechnics.classList.contains("technics-swiper-initialized")) {
+      mySwiper2.destroy();
+    }
+  }
+};
 
-// mobileSliderTechnics();
+mobileSliderTechnics();
 
-// window.addEventListener("resize", () => {
-//   mobileSliderTechnics();
-// });
+window.addEventListener("resize", () => {
+  mobileSliderTechnics();
+});
 
-// // Button Show more.
-// let buttonShow = document.querySelector(".b-show-more");
-// let brandsList = document.querySelector(".brands-list");
-// let buttonText = document.querySelector(".b-show-more__text");
-// let buttonIcon = document.querySelector(".b-show-more__icon");
+// Button Show more.
+let buttonShowTechnics = document.querySelector(".t-show-more");
+let technicsList = document.querySelector(".technics-list");
+let buttonTextTechnics = document.querySelector(".t-show-more__text");
+let buttonIconTechnics = document.querySelector(".t-show-more__icon");
 
-// function handleClickBrands() {
-//   if (window.innerWidth < 1120) {
-//     brandsList.classList.toggle("b-list-open--tablet");
-//   }
-//   if (window.innerWidth >= 1120) {
-//     brandsList.classList.toggle("b-list-open--desktop");
-//   }
-//   buttonIcon.classList.toggle("b-animation--up");
-//   if (
-//     !brandsList.classList.contains("b-list-open--desktop") &&
-//     !brandsList.classList.contains("b-list-open--tablet")
-//   ) {
-//     buttonText.textContent = "Показать все";
-//   } else {
-//     buttonText.textContent = "Скрыть";
-//   }
-// }
+function handleClickTechnics() {
+  if (document.documentElement.clientWidth < 1120) {
+    technicsList.classList.toggle("t-list-open--tablet");
+  }
+  if (document.documentElement.clientWidth >= 1120) {
+    technicsList.classList.toggle("t-list-open--desktop");
+  }
+  buttonIconTechnics.classList.toggle("t-animation--up");
+  if (
+    !technicsList.classList.contains("t-list-open--desktop") &&
+    !technicsList.classList.contains("t-list-open--tablet")
+  ) {
+    buttonTextTechnics.textContent = "Показать все";
+  } else {
+    buttonTextTechnics.textContent = "Скрыть";
+  }
+}
 
-// buttonShow.addEventListener("click", handleClickBrands);
+buttonShowTechnics.addEventListener("click", handleClickTechnics);

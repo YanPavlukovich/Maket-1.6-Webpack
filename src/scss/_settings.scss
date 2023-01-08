@@ -1,6 +1,7 @@
 html {
   box-sizing: border-box;
 	height: 100%;
+	background-color: #F8F8F8;
 }
 
 *,
@@ -9,16 +10,13 @@ html {
   box-sizing: inherit;
 }
 
-*:focus{
+*:focus	{
   outline: 2px solid transparent;
 }
 
 body {
-	max-width: 100%;
-  overflow-x: hidden;
   margin: 0;
   font-family: $font-family;
-
   color: $main-text-color;
   background-color: $background-dark;
   scroll-behavior: smooth;
@@ -26,12 +24,12 @@ body {
 	margin-top: 88px;
 	@media (min-width: 1366px) {
 		margin-top: 0px;
+		overflow-x: hidden;
 	}
+
 }
 
-.brands, .technics, .prices {
-	width: 1096px;
-}
+
 
 a {
   text-decoration: none;
@@ -75,7 +73,7 @@ textarea::-moz-placeholder {
 
 input:focus,
 textarea:focus {
-  outline:none;
+  outline: none;
 }
 
 .is--hidden {
@@ -111,10 +109,26 @@ textarea:focus {
 
 	&__site-content {
 		background-color: $background;
+		filter: blur(0px);
+		transition: .5s;
 	}
 
 	&__side-menu {
-		
 		background-color: $white;
 	}
+}
+
+.blur-effect {
+	transition: .5s;
+	filter: blur(10px);
+}
+
+.blur-effect--call {
+	transition: .5s;
+	filter: blur(10px);
+}
+
+.blur-effect--feedback {
+	transition: .5s;
+	filter: blur(10px);
 }

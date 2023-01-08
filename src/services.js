@@ -1,20 +1,23 @@
 // Button Read more.
 let buttonRead = document.querySelector(".read-more");
-let servicesList = document.querySelector(".item-content__text");
+let servicesText = document.querySelector(".item-content__text");
 let buttonText = document.querySelector(".read-more__text");
 let buttonIcon = document.querySelector(".read-more__icon");
 
 function handleClickServices() {
-  if (window.innerWidth < 768) {
-    servicesList.classList.toggle("text-open--mobile");
+  if (document.documentElement.clientWidth < 768) {
+    servicesText.classList.toggle("text-open--mobile");
   }
-  if (window.innerWidth < 1366) {
-    servicesList.classList.toggle("text-open--tablet");
+  if (
+    document.documentElement.clientWidth >= 768 &&
+    document.documentElement.clientWidth < 1366
+  ) {
+    servicesText.classList.toggle("text-open--tablet");
   }
   buttonIcon.classList.toggle("animation--up");
   if (
-    !servicesList.classList.contains("text-open--mobile") &&
-    !servicesList.classList.contains("text-open--tablet")
+    !servicesText.classList.contains("text-open--mobile") &&
+    !servicesText.classList.contains("text-open--tablet")
   ) {
     buttonText.textContent = "Читать далее";
   } else {

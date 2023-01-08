@@ -11,6 +11,69 @@
   <title>new site</title>
 </head>
 <body>
+	<div class="services__fb-modal-menu">
+		<div class="feedback-menu" id="modal1">
+			<header class="fb-title">
+				<button class="fb-title__fb-hamb" id="modal__close-button">
+					<img src="./img/_feedback-menu/close.svg" alt="">
+				</button>
+				<button class="fb-title__fb-hamb--2" id="modal__close-button2">
+					<img src="./img/_feedback-menu/close.svg" alt="">
+				</button>
+			</header>
+			<main class="fb-menu">
+				<div class="fb-menu__list">
+					<div class="fb-menu__header">
+						<div class="fb-menu__highlight"></div>
+						<button class="fb-menu__caption">Обратная связь</button>
+					</div>
+					
+					<form class="fb-menu__contact" name="contact" action="#" method="post">
+						<input type="name" class="fb-menu__item name" name="name" placeholder="Имя">
+						<input type="phone" class="fb-menu__item phone" name="phone" placeholder="Телефон">
+						<input type="email" class="fb-menu__item email" name="email" placeholder="Электронная почта"> 
+						<textarea class="fb-menu__item msg" name="msg" placeholder="Сообщение"></textarea>
+					</form>
+					<div class="fb-menu__flex-container">
+						<p class="fb-menu__text">
+							Нажимая “отправить”, вы даете согласие на <span class="fb-menu__text--red">обработку персональных данных</span>  и соглашаетесь с нашей <span class="fb-menu__text--red">политикой конфиденциальности</span>
+						</p>
+						<img class="fb-menu__sent" src="./img/_feedback-menu/sentnew.svg" alt="Отправить">
+					</div>
+				</div>
+			</main>
+		</div>
+	</div>
+	<div class="services__c-modal-menu">
+		<div class="call-menu" id="modal2">
+			<header class="c-title">
+				<button class="c-title__c-hamb" id="c-modal__close-button">
+					<img src="./img/_feedback-menu/close.svg" alt="">
+				</button>
+				<button class="c-title__c-hamb--2" id="c-modal__close-button2">
+					<img src="./img/_feedback-menu/close.svg" alt="">
+				</button>
+			</header>
+			<main class="c-menu">
+				<div class="c-menu__list">
+					<div class="c-menu__header">
+						<div class="c-menu__highlight"></div>
+						<button class="c-menu__caption">Заказать звонок</button>
+					</div>
+					
+					<form class="c-menu__contact" name="contact" action="#" method="post">
+						<input type="phone" class="c-menu__item phone" name="phone" placeholder="Телефон">
+					</form>
+					<div class="c-menu__flex-container">
+						<p class="c-menu__text">
+							Нажимая “отправить”, вы даете согласие на <span class="c-menu__text--red">обработку персональных данных</span>  и соглашаетесь с нашей <span class="c-menu__text--red">политикой конфиденциальности</span>
+						</p>
+						<img class="c-menu__sent" src="./img/_feedback-menu/sentnew.svg" alt="Отправить">
+					</div>
+				</div>
+			</main>
+		</div>
+	</div>
 	<div class="services">
 		<div class="services__side-menu">
 			<div class="main-menu">
@@ -19,15 +82,31 @@
 						<span class="title__hamb--bar"></span> <span class="title__hamb--bar2"></span>
 						<span class="title__hamb--bar3"></span>
 					</div>
+					<div class="title__divider--2"></div>
 					<img class="title__group" src="./img/maket-1.4/m-group.svg" alt="">
-					<div class="mob-menu__divider"></div>
-					<img class="title__search--in" src="./img/maket-1.4/m-search.svg" alt="">
-					<img class="icon mob-menu__repair--out" 
-					src="./img/maket-1.3/mob_menu-mobile/repair.svg" 
+					<img class="title__call--out" 
+					src="./img/maket-1.3/mob_menu-tablet/call.svg" 
+					alt="Заявка по телефону, уточнение информации">
+					<img class="title__chat--out" 
+					src="./img/maket-1.3/mob_menu-tablet/chat.svg" 
+					alt="Напишите нам в чат">
+					<img class="title__profile--out" 
+					src="./img/maket-1.3/mob_menu-tablet/profile.svg" 
+					alt="Ваш профиль">
+					<div class="title__divider"></div>
+					<button class="title__search--in" >
+						<img src="./img/maket-1.4/m-search.svg" 
+					alt="Поиск">
+					</button>
+					<button class="icon title__repair--out" id="callback-button">
+						<img src="./img/maket-1.3/mob_menu-mobile/repair.svg" 
 					alt="Оставить заявку">
-					<img class="icon mob-menu__status--out" 
-					src="./img/maket-1.3/mob_menu-mobile/status.svg" 
+					</button>
+					<button class="icon title__status--out" id="c-callback-button">
+						<img src="./img/maket-1.3/mob_menu-mobile/status.svg" 
 					alt="Статус ремонта">
+					</button>
+					
 				</header>
 				<main class="menu" id="menu">
 					<ul class="menu__list">
@@ -40,18 +119,24 @@
 						<li class="menu__item"><span class="highlight"></span><button type="button" class="menu__button">Наши сервисные центры</button></li>
 						<li class="menu__item"><span class="highlight"></span><button type="button" class="menu__button">Контакты</button></li>
 					</ul>
-					<footer class="info">
-						<div class="contact">
-							<img src="./img/maket-1.4/m-call.svg" alt="" class="contact__call">
-							<img src="./img/maket-1.4/m-chat.svg" alt="" class="contact__chat">
-							<img src="./img/maket-1.4/m-profile.svg" alt="" class="contact__profile">
-							<a href="" class="contact__e-mail">mail@cps.com</a>
-							<a href="" class="contact__number">8 800 890 8900</a>
+					<footer class="menu-info">
+						<div class="menu-info__contact">
+							<button class="menu-info__contact--call">
+								<img src="./img/maket-1.4/m-call.svg" alt="">
+							</button>
+							<button class="menu-info__contact--chat">
+								<img src="./img/maket-1.4/m-chat.svg" alt="" >
+							</button>
+							<button class="menu-info__contact--profile">
+								<img src="./img/maket-1.4/m-profile.svg" alt="">
+							</button>
+							<a href="" class="menu-info__contact--e-mail">mail@cps.com</a>
+							<a href="" class="menu-info__contact--number">8 800 890 8900</a>
 						</div>
-						<div class="lang">
-							<span class="lang__rus">RU</span>
-							<span class="lang__eng">EN</span>
-							<span class="lang__chin">CH</span>
+						<div class="menu-info__lang">
+							<span class="menu-info__lang--rus">RU</span>
+							<span class="menu-info__lang--eng">EN</span>
+							<span class="menu-info__lang--chin">CH</span>
 						</div>
 					</footer>
 				</main>
@@ -64,14 +149,12 @@
 					<div class="header__title">
 						<div class="header__highlight"></div>
 						<h1 class="header__caption">Услуги и сервисы</h1>
-						<button class="button header__button-request">Оставить заявку</button>
-						<img class="icon header__icon--repair" 
-						src="./img/maket-1.3/header__title-and-actions/repair.svg" 
-						alt="Оставить заявку">
-						<button class="button header__button-status">Статус ремонта</button>
-						<img class="icon header__icon--status" 
-						src="./img/maket-1.3/header__title-and-actions/status.svg" 
-						alt="Статус ремонта">
+						<button class="button header__button--feedback" id="callback-button2"><label class="header__button--text">Оставить заявку</label><img class="icon header__button--icon" 
+							src="./img/maket-1.3/header__title-and-actions/repair.svg" 
+							alt="Оставить заявку"></button>
+							<button class="button header__button--call" id="c-callback-button2"><label class="header__button--text">Статус ремонта</label><img class="icon header__button--icon" 
+								src="./img/maket-1.3/header__title-and-actions/status.svg" 
+								alt="Статус ремонта"></button>
 					</div>
 					<div class="header__menu">
 						<nav class="header__navigation">
@@ -87,7 +170,13 @@
 				<section class="item-content">
 					<section class="item-content__text">
 						<p class="item-content__text--par">Мы являемся авторизованным сервисным центром по ремонту техники Dell. Только у нас вы можете отремонтировать свой ноутбук Dell с официальной гарантией производителя.</p>
-						<p class="item-content__text--par-2">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
+						<p class="item-content__text--par2">Мы успешно работаем с 1992 года и заслужили репутацию надежного партнера, что подтверждает большое количество постоянных клиентов. Мы гордимся тем, что к нам обращаются по рекомендациям и, в свою очередь, советуют нас родным и близким.</p>
+						<p class="item-content__text--par3">
+							<button class="b-read-more">
+								<img class="b-read-more__icon" src="./img/maket-1.3/open-out/expand.svg" alt="Раскрыть">
+								<label class="b-read-more__text">Читать далее</label>
+							</button>
+						</p>
 					</section>
 					<button class="read-more">
 						<img class="read-more__icon" src="./img/maket-1.3/open-out/expand.svg" alt="Раскрыть">
@@ -107,7 +196,7 @@
 					<!-- Slider main container BRANDS -->
 					<div class="brands-swiper"  data-mobile="false">
 						<!-- Additional required wrapper -->
-						<div class="swiper-wrapper">
+						<div class="swiper-wrapper wrap-brands">
 							<!-- Slides -->
 							<div class="swiper-slide"><button class="brands-element">
 								<img src="./img/maket-1.5/png/Lenovo.png" alt="Lenovo" class="brands-element__company">
@@ -154,9 +243,7 @@
 								<img src="./img/maket-1.5/svg/go.svg" alt="click">
 							</button></div>
 						</div>
-						<div class="swiper-pagination--pag1">
-							<div class="swiper-pagination-bullet"></div>
-						</div>
+						<div class="swiper-pagination pag-1"></div>
 					</div>
 							<nav class="brands-list">
 								<button class="brands-element">
@@ -212,16 +299,24 @@
 				<section class="technics">
 					<header class="technics-title"><span class="technics-title__text">Ремонт различных видов техники</span></header>
 					
-					<!-- <div class="swiper-technics"  data-mobile="false">
+					<div class="technics-swiper"  data-mobile="false">
 						
-						<div class="swiper-wrapper">
+						<div class="swiper-wrapper wrap-technics">
 							
 							<div class="swiper-slide"><button class="technics-element">
 								<label class="technics-element__text">Ремонт ноутбуков</label>
 								<img class="technics-element__click" src="./img/maket-1.5/svg/go.svg" alt="click">
 							</button></div>
 							<div class="swiper-slide"><button class="technics-element">
-								<label class="technics-element__text">Ремонт ноутбуков</label>
+								<label class="technics-element__text">Ремонт планшетов</label>
+								<img class="technics-element__click" src="./img/maket-1.5/svg/go.svg" alt="click">
+							</button></div>
+							<div class="swiper-slide"><button class="technics-element">
+								<label class="technics-element__text">Ремонт ПК</label>
+								<img class="technics-element__click" src="./img/maket-1.5/svg/go.svg" alt="click">
+							</button></div>
+							<div class="swiper-slide"><button class="technics-element">
+								<label class="technics-element__text">Ремонт мониторов</label>
 								<img class="technics-element__click" src="./img/maket-1.5/svg/go.svg" alt="click">
 							</button></div>
 							<div class="swiper-slide"><button class="technics-element">
@@ -229,30 +324,20 @@
 								<img class="technics-element__click" src="./img/maket-1.5/svg/go.svg" alt="click">
 							</button></div>
 							<div class="swiper-slide"><button class="technics-element">
-								<label class="technics-element__text">Ремонт ноутбуков</label>
+								<label class="technics-element__text">Ремонт планшетов</label>
 								<img class="technics-element__click" src="./img/maket-1.5/svg/go.svg" alt="click">
 							</button></div>
 							<div class="swiper-slide"><button class="technics-element">
-								<label class="technics-element__text">Ремонт ноутбуков</label>
+								<label class="technics-element__text">Ремонт ПК</label>
 								<img class="technics-element__click" src="./img/maket-1.5/svg/go.svg" alt="click">
 							</button></div>
 							<div class="swiper-slide"><button class="technics-element">
-								<label class="technics-element__text">Ремонт ноутбуков</label>
-								<img class="technics-element__click" src="./img/maket-1.5/svg/go.svg" alt="click">
-							</button></div>
-							<div class="swiper-slide"><button class="technics-element">
-								<label class="technics-element__text">Ремонт ноутбуков</label>
-								<img class="technics-element__click" src="./img/maket-1.5/svg/go.svg" alt="click">
-							</button></div>
-							<div class="swiper-slide"><button class="technics-element">
-								<label class="technics-element__text">Ремонт ноутбуков</label>
+								<label class="technics-element__text">Ремонт мониторов</label>
 								<img class="technics-element__click" src="./img/maket-1.5/svg/go.svg" alt="click">
 							</button></div>
 						</div>
-						<div class="swiper-pagination">
-							<div class="swiper-pagination-bullet"></div>
-						</div>
-					</div> -->
+						<div class="swiper-pagination pag-2"></div>
+					</div>
 							<nav class="technics-list">
 								<button class="technics-element">
 									<label class="technics-element__text">Ремонт ноутбуков</label>
@@ -295,6 +380,109 @@
 				<section class="prices">
 					<header class="prices-title"><span class="prices-title__text">Цены на услуги</span>
 					</header>
+					<div class="prices-swiper" data-mobile="false">
+						<!-- Additional required wrapper -->
+						<div class="swiper-wrapper wrap-prices">
+							<!-- Slides -->
+							<div class="swiper-slide">
+								<button class="prices-element">
+									<label class="prices-element__text">
+										<span class="prices-element__text--header">Ремонтные услуги</span>
+										<span class="prices-element__text--content">Диагностика</span>
+									</label>
+									<label class="prices-element__text">
+										<span class="prices-element__text--header">Цена</span>
+										<span class="prices-element__text--content">Бесплатно</span>
+									</label>
+									<label class="prices-element__text">
+										<span class="prices-element__text--header">Срок</span>
+										<span class="prices-element__text--content">30 мин</span>
+									</label>
+									<label class="prices-element__icon">
+										<img src="./img/_prices/toOrder.svg" alt="Заказать">
+									</label>
+								</button>
+							</div>
+							<div class="swiper-slide">
+								<button class="prices-element">
+									<label class="prices-element__text">
+										<span class="prices-element__text--header">Ремонтные услуги</span>
+										<span class="prices-element__text--content">Замена дисплея</span>
+									</label>
+									<label class="prices-element__text">
+										<span class="prices-element__text--header">Цена</span>
+										<span class="prices-element__text--content">1 000 ₽</span>
+									</label>
+									<label class="prices-element__text">
+										<span class="prices-element__text--header">Срок</span>
+										<span class="prices-element__text--content">30-120 мин</span>
+									</label>
+									<label class="prices-element__icon">
+										<img src="./img/_prices/toOrder.svg" alt="Заказать">
+									</label>
+								</button>
+							</div>
+							<div class="swiper-slide">
+								<button class="prices-element">
+									<label class="prices-element__text">
+										<span class="prices-element__text--header">Ремонтные услуги</span>
+										<span class="prices-element__text--content">Замена полифонического динамика</span>
+									</label>
+									<label class="prices-element__text">
+										<span class="prices-element__text--header">Цена</span>
+										<span class="prices-element__text--content">1 000 ₽</span>
+									</label>
+									<label class="prices-element__text">
+										<span class="prices-element__text--header">Срок</span>
+										<span class="prices-element__text--content">30-120 мин</span>
+									</label>
+									<label class="prices-element__icon">
+										<img src="./img/_prices/toOrder.svg" alt="Заказать">
+									</label>
+								</button>
+							</div>
+							<div class="swiper-slide">
+								<button class="prices-element">
+									<label class="prices-element__text">
+										<span class="prices-element__text--header">Ремонтные услуги</span>
+										<span class="prices-element__text--content">Тестирование с выдачей технического заключения</span>
+									</label>
+									<label class="prices-element__text">
+										<span class="prices-element__text--header">Цена</span>
+										<span class="prices-element__text--content">1 000 ₽</span>
+									</label>
+									<label class="prices-element__text">
+										<span class="prices-element__text--header">Срок</span>
+										<span class="prices-element__text--content">30-120 мин</span>
+									</label>
+									<label class="prices-element__icon">
+										<img src="./img/_prices/toOrder.svg" alt="Заказать">
+									</label>
+								</button>
+							</div>
+							<div class="swiper-slide">
+								<button class="prices-element">
+									<label class="prices-element__text">
+										<span class="prices-element__text--header">Ремонтные услуги</span>
+										<span class="prices-element__text--content">Замена программного обеспечения</span>
+									</label>
+									<label class="prices-element__text">
+										<span class="prices-element__text--header">Цена</span>
+										<span class="prices-element__text--content">1 000 ₽</span>
+									</label>
+									<label class="prices-element__text">
+										<span class="prices-element__text--header">Срок</span>
+										<span class="prices-element__text--content">30-120 мин</span>
+									</label>
+									<label class="prices-element__icon">
+										<img src="./img/_prices/toOrder.svg" alt="Заказать">
+									</label>
+								</button>
+							</div>
+						</div>
+						<!-- If we need pagination -->
+						<div class="swiper-pagination pag-3"></div>
+					</div>
 					<table class="prices-table">
 						<thead class="prices-thead">
 								<tr class="prices-thead__row">
@@ -339,22 +527,25 @@
 				</table>
 				<footer class="prices-info">
 					<p class="prices-info__taxe">Все цены указаны с учетом НДС. Стоимость ремонта указана на единичную услугу. Для получения коммерческого предложения на постоянное обслуживание, оставьте заявку.</p>
-					<button class="prices-info__offer"><label for="" class="prices-info__offer--text">Получить коммерческое предложение</label><img src="./img/_prices/getOffer.svg" alt=""></button>
+					<button class="prices-info__offer"><label for="" class="prices-info__offer--text">
+						<span>Получить коммерческое</span>
+						<span class="prices-info__offer--row">предложение<img class="prices-info__offer--icon" src="./img/_prices/getOffer.svg"></span>
+						</label></button>
 				</footer>                        
 				</section>
 			</main>
 			<footer class="footer">
-				<button class="footer__element"><label class="footer__element--copyright"><span class="footer__element--line">© 2019 CP</span>
-					<span class="footer__element--line">Разработано командой Apesong</span></label>
+				<button class="footer-element"><label class="footer-element__copyright"><span class="footer-element__copyright--line">© 2019 CPS</span>
+					<span class="footer-element__copyright--line">Разработано командой Apesong</span></label>
 				</button>
-				<button class="footer__element"><label class="footer__element--police">Политика конфиденциальности</label>
+				<button class="footer-element"><label class="footer-element__police"><span class="footer-element__police--line3">Политика конфиденциальности</span></label>
 				</button>
-				<button class="footer__element"><label class="footer__element--info"><span class="footer__element--line2">Информация, размещенная на данной странице,</span><span class="footer__element--line2">не является публичной офертой</span></label>
+				<button class="footer-element"><label class="footer-element__info"><span class="footer-element__info--line2">Информация, размещенная на</span><span class="footer-element__info--line2">данной странице, не является</span><span class="footer-element__info--line2"> публичной офертой</span></label>
 				</button>
 			</footer>
 		</div>
 	</div>
 	<script src="https://cdn.jsdelivr.net/npm/swiper@8/swiper-bundle.min.js"></script>
-
+	
 </body>
 </html>

@@ -1,32 +1,35 @@
-// Slider Swiper
-const slider = document.querySelector(".brands-swiper");
+// Slider Swiper Brands.
+const sliderBrands = document.querySelector(".brands-swiper");
 
-let mobileSlider = () => {
-  if (window.innerWidth < 768 && slider.dataset.mobile == "false") {
-    mySwiper = new Swiper(slider, {
+let mobileSliderBrands = () => {
+  if (
+    document.documentElement.clientWidth < 768 &&
+    sliderBrands.dataset.mobile == "false"
+  ) {
+    mySwiper = new Swiper(sliderBrands, {
       slidesPerView: "auto",
       spaceBetween: 16,
       loop: false,
       pagination: {
         el: ".swiper-pagination",
+        type: "bullets",
         clickable: true,
-        // dynamicBullets: true,
       },
     });
-    slider.dataset.mobile = "true";
+    sliderBrands.dataset.mobile = "true";
   }
-  if (window.innerWidth > 768) {
-    slider.dataset.mobile = "false";
-    if (slider.classList.contains("brands-swiper-initialized")) {
+  if (document.documentElement.clientWidth > 768) {
+    sliderBrands.dataset.mobile = "false";
+    if (sliderBrands.classList.contains("brands-swiper-initialized")) {
       mySwiper.destroy();
     }
   }
 };
 
-mobileSlider();
+mobileSliderBrands();
 
 window.addEventListener("resize", () => {
-  mobileSlider();
+  mobileSliderBrands();
 });
 
 // Button Show more.
@@ -36,10 +39,10 @@ let buttonText = document.querySelector(".b-show-more__text");
 let buttonIcon = document.querySelector(".b-show-more__icon");
 
 function handleClickBrands() {
-  if (window.innerWidth < 1120) {
+  if (document.documentElement.clientWidth < 1120) {
     brandsList.classList.toggle("b-list-open--tablet");
   }
-  if (window.innerWidth >= 1120) {
+  if (document.documentElement.clientWidth >= 1120) {
     brandsList.classList.toggle("b-list-open--desktop");
   }
   buttonIcon.classList.toggle("b-animation--up");
