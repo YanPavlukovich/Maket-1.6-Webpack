@@ -11,7 +11,12 @@
 	position: fixed;
 	visibility: hidden;
 	opacity: 0;
-	transition: .5s;
+	transition: .3s;
+
+	@media (min-width: 1441px) {
+		width: 85vw;
+	}
+
 	@media (min-width: 768px) {
 		right: -200%;
 	}
@@ -60,7 +65,7 @@
 	@media (min-width: 768px) 
 	and (max-width: 1365px) {
 		width: 100%;
-		transition: all .5s;
+		transition: all .3s;
 	}
 	
 	@media (max-width: 767px) {
@@ -83,10 +88,10 @@
 		}
 		background-color: transparent;
 		border: transparent;
-		padding: 0;
+	
 		cursor: pointer;
 		position: fixed;
-		left: 940px;
+		right: 450px;
 		top: 15px;
 	}
 }

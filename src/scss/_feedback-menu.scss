@@ -12,6 +12,11 @@
 	visibility: hidden;
 	opacity: 0;
 	transition: .5s;
+
+	@media (min-width: 1441px) {
+		width: 85vw;
+	}
+
 	@media (min-width: 768px) {
 		right: -200%;
 	}
@@ -36,7 +41,7 @@
 	position: fixed;
   visibility: visible;
   opacity: 1;
-  transition: .5s;
+  transition: .3s;
 }
 
 .fb-title {
@@ -60,7 +65,7 @@
 	@media (min-width: 768px) 
 	and (max-width: 1365px) {
 		width: 100%;
-		transition: all .5s;
+		transition: all .3s;
 	}
 	
 	@media (max-width: 767px) {
@@ -85,7 +90,7 @@
 		border: transparent;
 		cursor: pointer;
 		position: fixed;
-		left: 940px;
+		right: 450px;
 		top: 15px;
 	}
 }
@@ -161,6 +166,10 @@
 		height: 118px;	
 	}
 
+}
+
+textarea {
+	padding-top: 12px;
 }
 
 .fb-menu__flex-container {
