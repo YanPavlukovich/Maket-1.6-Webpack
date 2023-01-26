@@ -13,6 +13,7 @@
 	display: flex;
 	align-items: center;
 	margin-top: 50px;
+	margin-bottom: 16px;
 }
 	.technics-list {
 	display: flex;
@@ -45,7 +46,6 @@
 	.technics-list {display: none;}
 	
 	.technics-swiper {
-		overflow: hidden;
 		margin-right: 24px;
 	}
 	.wrap-technics {
